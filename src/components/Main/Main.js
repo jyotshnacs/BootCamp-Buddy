@@ -1,17 +1,16 @@
 import React from "react";
 import "./Main.css";
 import Wellbeing from "./Wellbeing/Wellbeing.js";
-import QuizzMe from "./QuizzMe"; 
-
+import QuizzMe from "./QuizzMe/QuizzMe";
 
 function Main() {
   return (
-
-  <div>;
-  <Wellbeing /> 
-  <QuizzMe />
-  </div>
-)};
-
+    <div>
+      ;
+      <Wellbeing />
+      <QuizzMe />
+    </div>
+  );
+}
 
 export default Main;
