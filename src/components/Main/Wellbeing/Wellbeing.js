@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
-function wellbeing() {
-  return (
-    <div>wellbeing</div>
-  )
+function Wellbeing() {
+  return <div>wellbeing</div>;
 }
 
-export default wellbeing;
+export default Wellbeing;

@@ -1,9 +1,9 @@
 import React from 'react'
 
-function interview() {
+function Interview() {
   return (
     <div>interview</div>
   )
 }
 
-export default interview;
+export default Interview;
