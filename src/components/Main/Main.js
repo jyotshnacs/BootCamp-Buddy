@@ -3,7 +3,8 @@ import "./Main.css";
 import Wellbeing from "./Wellbeing/Wellbeing.js";
 
 function Main() {
-  return <Wellbeing />;
+  return <div></div>;
+  //<Wellbeing />;
 }
 
 export default Main;
