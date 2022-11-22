@@ -1,4 +1,4 @@
-*Posture and hidrate check app*
+*Posture and hydrate check app*
 - This app is a simple app that cotains a timer that will notify you when you have to change your posture or drink water. (every 45 minutes)
 - This app will be a component of a bigger app that will be a personal assistant for people studying in The School of Code.
 - Logic: 
