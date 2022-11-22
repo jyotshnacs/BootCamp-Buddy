@@ -1,12 +1,9 @@
-import React from 'react';
+import React from "react";
 import "./Main.css";
- 
+import Wellbeing from "./Wellbeing/Wellbeing.js";
+
 function Main() {
-  return (
-    <div>
-    <h1>Hello World!</h1>
-    </div>
-  )
+  return <Wellbeing />;
 }
 
 export default Main;
