@@ -6,10 +6,12 @@ import QuizzMe from "./QuizzMe";
 
 function Main() {
   return (
+
   <div>;
-  {/* <Wellbeing /> */}
+  <Wellbeing /> 
   <QuizzMe />
   </div>
 )};
+
 
 export default Main;
