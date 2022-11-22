@@ -15,7 +15,19 @@ function Wellbeing() {
         <h2>Reminders per day:</h2>
         {/* more radio buttons to be added for number of reminders */}
         <label>
-          <input type="radio"></input>1
+          {/* input component to be refined later to avoid repetition.
+           - should only be able to select one*/}
+          <input type="radio" />1
+          <input type="radio" />2
+          <input type="radio" />3
+          <input type="radio" />4
+          <input type="radio" />5
+        </label>
+      </div>
+      <div>
+        <label>
+          <h2>Timer interval:</h2>
+          <input type="number" />
         </label>
       </div>
     </div>
