@@ -1,7 +1,7 @@
 import React from "react";
 import "./Main.css";
 import Wellbeing from "./Wellbeing/Wellbeing.js";
-import QuizzMe from "./QuizzMe/QuizzMe";
+import QuizzMe from "./QuizzMe";
 
 function Main() {
   return (
@@ -9,6 +9,14 @@ function Main() {
       ;
       <Wellbeing />
       <QuizzMe />
+    </div>
+  );
+}
+    <div>
+      ;
+      <Wellbeing />
+      <QuizzMe />
+      <Interview />
     </div>
   );
 }
