@@ -1,70 +1,131 @@
-# Getting Started with Create React App
+*Posture and hidrate check app*
+- This app is a simple app that cotains a timer that will notify you when you have to change your posture or drink water. (every 45 minutes)
+- This app will be a component of a bigger app that will be a personal assistant for people studying in The School of Code.
+- Logic: 
+    - Timer starts when the app is opened.
+    - When the timer is over, a notification will appear.
+    - The notification will have a button that will start the timer again.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+*Random Interview question*
+- This app aims to help people prepare for interviews in the tech industry.
+- This app will have a list of questions that will be randomly selected and displayed to the user.
+- This app will be a component of a bigger app that will be a personal assistant for people studying in The School of Code.
+- Logic:
+    - When the app is opened, a random question will appear.
+    - The question will be a question that is commonly asked in interviews.
+    - The question will have a button that will generate a new question.
 
-## Available Scripts
+*Weakly Review*
+- This app aims to help people review their week.
+- This app will have a list of questions that will be randomly selected and displayed to the user.
+- This app will have a dropdown menu that will allow the user to select the week they want to review.
+- This app will have multiple selection options for each question.
+- This app will be a component of a bigger app that will be a personal assistant for people studying in The School of Code.
+- Logic:
+    - When the app is opened, nothing will appear.
+    - The user will have to select the week they want to review.
+    - When the week is selected, a random question will appear.
+    - Will be seven questions in total for each week.
+    - The question will have multiple selection options.
+    - If the user selects the wrong option, the app will display a message saying that the user has selected the wrong option.
+    - If the user selects the right option, the app will display a message saying that the user has selected the right option.
+    - At the end of the questions, the app will display a message saying that the user has completed the review and will display the score.
+    - The score will be the number of correct answers divided by the total number of questions.
 
-In the project directory, you can run:
+*Squat progress tracker*
+- This app aims to help people track their progress in squats.
+- This app will have a buttons that will add 1,5,10 squats to the total number of squats.
+- This app will be a component of a bigger app that will be a personal assistant for people studying in The School of Code.
+- Logic:
+    - When the app is opened, the total number of squats will be 0.
+    - The user will have to click on the button that will add the number of squats to the total number of squats.
+    - The user submits the number of squats they have done to the life time total.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Component tree
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+ - APP
+    - Navbar
+    - Main
+        - Weekly review
+            - Dropdown menu
+            - Question
+                - Multiple selection options
+        - Random interview question
+            - Question
+        - Posture and hidrate check
+            - Timer
+        - Squat progress tracker
+            - Buttons
+    - Footer
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# API planning request for Weekly review
 
-### `npm run build`
+## Description
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This app aims to help people prepare for interviews in the tech industry. This app will have a list of questions that will be randomly selected and displayed to the user.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## API request
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+| API request | Description | API response | Description |
+| ----------- | ----------- | ----------- | ----------- |
+| GET /questions | Get all questions | 200 | OK |
+| GET /questions/:id | Get a question by id | 201 | Created |
+| POST /questions | Create a new question | 400 | Bad request |
+| PUT /questions/:id | Update a question | 404 | Not found |
+| DELETE /questions/:id | Delete a question | 500 | Internal server error |
 
-### `npm run eject`
+## API request body
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+| API request body | Description |
+| ----------- | ----------- |
+| id | Question id |
+| question | Question |
+| answer | Answer |
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## API request example
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+| API request example | Description |
+| ----------- | ----------- |
+| GET /questions | Get all questions |
+| GET /questions/1 | Get a question by id |
+| POST /questions | Create a new question |
+| PUT /questions/1 | Update a question |
+| DELETE /questions/1 | Delete a question |
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# API planning request for Random Interview question
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Description
 
-### Code Splitting
+This app aims to help people prepare for interviews in the tech industry. This app will have a list of questions that will be randomly selected and displayed to the user.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## API request
 
-### Analyzing the Bundle Size
+| API request | Description | API response | Description |
+| ----------- | ----------- | ----------- | ----------- |
+| GET /questions | Get all questions | 200 | OK |
+| GET /questions/:id | Get a question by id | 201 | Created |
+| POST /questions | Create a new question | 400 | Bad request |
+| PUT /questions/:id | Update a question | 404 | Not found |
+| DELETE /questions/:id | Delete a question | 500 | Internal server error |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## API request body
 
-### Making a Progressive Web App
+| API request body | Description |
+| ----------- | ----------- |
+| id | Question id |
+| question | Question |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## API request example
 
-### Advanced Configuration
+| API request example | Description |
+| ----------- | ----------- |
+| GET /questions | Get all questions |
+| GET /questions/1 | Get a question by id |
+| POST /questions | Create a new question |
+| PUT /questions/1 | Update a question |
+| DELETE /questions/1 | Delete a question |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
