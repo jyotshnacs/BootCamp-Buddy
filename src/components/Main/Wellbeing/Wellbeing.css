@@ -1,37 +1,72 @@
-:root{
-  --red: #f54e4e;
-  --green: #4aec8c;
-}
 
-.main{
+
+.main {
+
   display: flex;
+  flex: 1;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: #30384b;
-  color: #eee;
-  padding-top: 50px;
+  background-color: #569099;
+  position: relative;
+  padding: 20px;
   max-width: 100%;
   margin: 0 auto;
-  text-align: center;
+  text-align: right;
   max-height: 250px;
-  max-width: 50%;
+  max-width: 100%;
+  margin-left: 50%;
+ 
+ 
+
 }
+
+
+.wellBeingTitle {
+
+  color: rgb(0, 0, 0);
+  font-family: Caveat, cursive;
+  font-size: 50px;
+  text-align: center;
+  flex: 1;
+  display: flex;
+  position: relative;
+  max-width: 100px;
+  min-width: 50px;
+
+
+}
+
 button{
   background-color: transparent;
-  color: rgba(255,255,255,0.8);
+  color: rgb(0, 0, 0);
   border:0;
   display: inline-block;
   width: 70px;
   cursor: pointer;
+
 }
+
 button.with-text{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: auto;
-  background-color:rgba(255,255,255,0.1);
+  background-color:rgba(255,255,255);
+  border-radius:10px;
+  padding: 10px 20px;
+  font-size: 1.4rem;
+  line-height: 16px;
+}
+
+button.with-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  background-color:rgba(255,255,255);
   border-radius:10px;
   padding: 10px 20px;
   font-size: 1.4rem;
@@ -50,8 +85,11 @@ label{
 }
 .settings{
   display: flex;
+  flex: 1;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  max-width: 300px;;
-}
+  max-width: 300px;
+  min-width: 200px;
+  margin-right: 20px;
+} 
