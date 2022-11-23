@@ -1,35 +1,34 @@
 import React from "react";
+import "./Wellbeing.css";
+import Timer from "./Timer/Timer";
+import Settings from "./Settings/Settings";
+import SettingsContext from "./Settings/SettingsContext";
+import {useState} from "react";
 
 function Wellbeing() {
+  const [showSettings, setShowSettings] = useState(false);
+  const [workMinutes, setWorkMinutes] = useState(45);
+  const [breakMinutes, setBreakMinutes] = useState(15);
+
   return (
     <div>
       {/*Image error - alt text contains word "image", will be removed later */}
-      <img src="/" alt="happy image" />
-      <div>
+      <img src="/" alt="happy" />
+      <div className="main">
         <h2>Next wellbeing check:</h2>
         {/*minute timer - to be added */}
-        <p>0m</p>
+        <SettingsContext.Provider value={{
+        showSettings,
+        setShowSettings,
+        workMinutes,
+        breakMinutes,
+        setWorkMinutes,
+        setBreakMinutes,
+      }}>
+        {showSettings ? <Settings /> : <Timer />}
+      </SettingsContext.Provider>
       </div>
-      <div>
-        <h2>Settings</h2>
-        <h2>Reminders per day:</h2>
-        {/* more radio buttons to be added for number of reminders */}
-        <label>
-          {/* input component to be refined later to avoid repetition.
-           - should only be able to select one*/}
-          <input type="radio" />1
-          <input type="radio" />2
-          <input type="radio" />3
-          <input type="radio" />4
-          <input type="radio" />5
-        </label>
-      </div>
-      <div>
-        <label>
-          <h2>Timer interval:</h2>
-          <input type="number" />
-        </label>
-      </div>
+     
     </div>
   );
 }
