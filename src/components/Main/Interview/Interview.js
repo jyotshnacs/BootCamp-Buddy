@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./Interview.css";
 
 function Interview() {
   const [text, setText] = useState("");
@@ -26,12 +27,14 @@ function Interview() {
   //  // }, []);
 
   return (
-    <div>
-      <div>
-        <h1>Interview Prep</h1>
+    <div className="interview-div">
+      <div className="header-div">
+        <h1 className="header-text">Interview Prep</h1>
       </div>
-      <div>
-        <p>{text}</p>
+      <div className="star-one"></div>
+      <div className="star-two"></div>
+      <div className="prep-div">
+        <p className="prep-text">{text}</p>
       </div>
     </div>
   );
