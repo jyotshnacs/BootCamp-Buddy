@@ -10,14 +10,15 @@ function Interview() {
       //port number hard coded - could pass in the PORT env variable?
       const response = await fetch(`http://localhost:3005/api/interviewprep`);
       const data = await response.json();
-      console.log(data);
-      console.log(data.payload[0].prep);
+      // console.log(data);
+      // console.log(data.payload[0].prep);
 
-      const question =
-        data.payload[Math.floor(Math.random() * data.payload.length)].prep;
-      setText(question);
-
-      console.log(question);
+      setInterval(() => {
+        const question =
+          data.payload[Math.floor(Math.random() * data.payload.length)].prep;
+        setText(question);
+        console.log(question);
+      }, 10000);
     }
     fetchData();
   }, []);
