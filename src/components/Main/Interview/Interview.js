@@ -13,10 +13,12 @@ let interviewQuestions = [
 ];
 function Interview() {
   const [text, setText] = useState("");
-
   useEffect(() => {
-    const question = Math.floor(Math.random() * interviewQuestions.length);
-    setText(interviewQuestions[question]);
+    setInterval(() => {
+      let randomQuestion = Math.floor(Math.random() * interviewQuestions.length);
+      setText(interviewQuestions[randomQuestion]);
+    }
+    , 1000000);
   }, []);
 
   return (
