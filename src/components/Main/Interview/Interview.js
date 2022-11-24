@@ -30,10 +30,10 @@ function Interview() {
   return (
     <div className="interview-div">
       <div className="header-div">
-        <h1 className="header-text">Interview Prep</h1>
-      </div>
       <img src={star} alt="star" className="star-one" />
+        <h1 className="header-text">Interview Prep</h1>
       <img src={star} alt="star" className="star-two" />
+      </div>
       <div className="prep-div">
         <p className="prep-text">{text}</p>
       </div>
