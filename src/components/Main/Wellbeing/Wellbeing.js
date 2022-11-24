@@ -11,11 +11,11 @@ function Wellbeing() {
   const [breakMinutes, setBreakMinutes] = useState(15);
 
   return (
-    <div>
-      {/*Image error - alt text contains word "image", will be removed later */}
-      {/* img goes on this line */}
-      <div className="main">
-        <h2 className="wellBeingTitle">Next wellbeing check:</h2>
+    <div className="wellBeingSection">
+       {/* image goes here */}
+       <img src="/" alt="happy" />
+      <h2 className="wellBeingTitle">Next wellbeing check:</h2>
+      <div className="timerContainer">
         {/*minute timer - to be added */}
         <SettingsContext.Provider
           value={{
@@ -30,7 +30,8 @@ function Wellbeing() {
           {showSettings ? <Settings /> : <Timer />}
         </SettingsContext.Provider>
       </div>
-      <img src="/" alt="happy" />
+
+    
     </div>
   );
 }
