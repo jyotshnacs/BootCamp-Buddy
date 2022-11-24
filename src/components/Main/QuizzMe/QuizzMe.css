@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+
+.quiz-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: solid black;
+
+  width: 50%;
+  height: 100%;
+  background-color: #569099;
+
+  text-align: center;
+  font-family: Caveat, cursive;
+}
+
+.quiz-header-div {
+  border-bottom: solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6d809;
+}
+
+.quiz-header-text {
+  overflow-wrap: break-word;
+  color: #000000;
+  text-shadow: 2px 2px 2px #569099;
+  font-size: 62px;
+  font-weight: 100;
+}
+
+.question-one {
+  max-height: 100px;
+  height: 100%;
+  padding-right: 10px;
+}
+
+.question-two {
+  max-height: 100px;
+  height: 100%;
+  padding-left: 10px;
+}
+
+.glasses {
+  display: flex;
+  max-height: 100px;
+  height: 100%;
+}
+
+.glasses-div {
+  display: flex;
+  margin-left: -150px;
+}
+
+.question-p {
+  font-size: 46px;
+}
+
+.answers {
+  font-size: 38px;
+}
