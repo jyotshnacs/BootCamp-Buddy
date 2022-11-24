@@ -8,6 +8,8 @@ function Main() {
   return (
     <div>
       <Wellbeing />
+
+      
       <div className="mainContainer">
       <QuizzMe />
       <Interview />

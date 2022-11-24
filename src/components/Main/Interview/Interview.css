@@ -21,13 +21,18 @@
   /* position: absolute; */
   display: flex;
   justify-content: center;
-  align-items: top;
+  align-items: center;
   background-color: #f6d809;
-  height: 250px;
+  /* height: 250px; */
   /* width: 100%;
   z-index: 2; */
 }
-
+/* added */
+.header-div h1 {
+  overflow-wrap: break-word;
+  color:  #ec1616;
+  text-shadow: 2px 2px 2px #569099;
+}
 .header-text {
   font-size: 62px;
   font-weight: 100;
@@ -39,30 +44,34 @@
   justify-content: space-between;
   align-items: center;
   /* position: absolute; */
-  margin-left: 60px;
-  margin-right: 60px;
+  /* margin-left: 60px;
+  margin-right: 60px; */
   /* top: 250px; */
   /* z-index: 1; */
 }
 
 .prep-text {
   display: flex;
+  overflow-wrap: break-word;
   font-size: 48px;
   color: wheat;
 }
 
 .star-one {
   /* position: absolute; */
-  z-index: 3;
+  /* z-index: 3; */
   max-height: 100px;
+  height: 100%;
   /* padding-right: 175px;
   margin-top: 20px; */
 }
 
 .star-two {
   /* position: absolute; */
-  z-index: 4;
+  /* z-index: 4; */
   max-height: 100px;
+  height: 100%;
+  
   /* padding-left: 175px;
   margin-top: 20px; */
 }
