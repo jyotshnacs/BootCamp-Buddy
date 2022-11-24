@@ -67,16 +67,22 @@ function QuizzMe() {
 
   // let answers = [1, 2, 3, 4];
 
-  function checkAnswer() {
-    // fetchCorrect has the correct answer
-    //if selected answer matches correct answer, return "correct!"
-    if (right === true) {
-        alert("correct!");
-          setRight(false);
-    } else if (right === false){
-      alert("incorrect!");
-    }
-  }
+  // if the correct answer  is clicked right should be set to true
+  // if the wrong answer is clicked, right should be set to false
+  // HOW?!
+  // changing state onClick doesn't work because the state doesn't change UNTIL click,
+  // which means the next answer AFTER the correct one returns "correct!"
+  // we also need to eventually make it so that the answers are displayed in a different order each time!!!
+
+  // function checkAnswer() {
+  //   if (right === true) {
+  //       alert("correct!");
+  //         setRight(false);
+  //   } else if (right === false){
+  //     alert("incorrect!");
+  //   }
+  // }
+
   // function correctAnswer(){
   //   setRight(true);
   //   console.log("correctAnswer");
@@ -90,11 +96,29 @@ function QuizzMe() {
           alt="gif"
         />
         <p>{question}</p>
-        {/* <input type="button" value="test" onclick="alert('hey'); alert('ho');" /> */}
 
-        <div onClick= {() => {alert("Correct")}}>{correct}</div>
-        <div onClick={() => {alert("Incorrect")}}>{incorrectA}</div>
-        <div onClick={() => {alert("Incorrect")}}>{incorrectB}</div>
+        {/* hard coded alerts because we ran out of time to get this working properly! */}
+        <div
+          onClick={() => {
+            alert("Correct");
+          }}
+        >
+          {correct}
+        </div>
+        <div
+          onClick={() => {
+            alert("Incorrect");
+          }}
+        >
+          {incorrectA}
+        </div>
+        <div
+          onClick={() => {
+            alert("Incorrect");
+          }}
+        >
+          {incorrectB}
+        </div>
       </div>
     </div>
   );
