@@ -4,6 +4,20 @@ import { useState } from "react";
 
 function QuizzMe() {
   const [input, setInput] = useState("");
+  const [question, setQuestion] = useState("");
+
+  /* 1) Send a fetch request to the Api
+   to get the quizQuestion back from the Database.*/
+
+  async function fetchData() {
+    //port number hard coded - could pass in the PORT env variable?
+    const response = await fetch(`http://localhost:3005/api/quizquestions`);
+    const data = await response.json();
+    setQuestion(data.payload[0].question);
+    console.log(data.payload[0].question);
+  }
+  fetchData();
+
   const handleMenuOne = () => {
     console.log("clicked 1");
   };
@@ -21,7 +35,7 @@ function QuizzMe() {
   const rightAnswer = () => {
     if (input === "1") {
       alert("Correct");
-    }else{
+    } else {
       alert("Wrong");
     }
   };
@@ -47,12 +61,7 @@ function QuizzMe() {
           src="https://media.giphy.com/media/3o7TKSjRrfIPjeiVyE/giphy.gif"
           alt="gif"
         />
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
-          repellat obcaecati corrupti eos, adipisci natus laudantium fuga quo
-          totam voluptatibus, quidem provident est dicta ducimus quis modi unde
-          architecto itaque!
-        </p>
+        <p>{question}</p>
       </div>
       <div>
         {answers.map((answer, key) => (
@@ -69,7 +78,7 @@ function QuizzMe() {
             </label>
           </div>
         ))}
-        <button onClick={rightAnswer} >Next</button>
+        <button onClick={rightAnswer}>Next</button>
       </div>
     </div>
   );
