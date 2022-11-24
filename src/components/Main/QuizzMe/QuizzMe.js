@@ -11,8 +11,8 @@ function QuizzMe() {
   const [correct, setCorrect] = useState("");
   const [incorrectA, setIncorrectA] = useState("");
   const [incorrectB, setIncorrectB] = useState("");
-  const [right, setRight] = useState(false);
-  const [wrong, setWrong] = useState(false);
+  const [right, setRight] = useState(null);
+  const [wrong, setWrong] = useState(null);
 
   /* 1) Send a fetch request to the Api
    to get the quizQuestion back from the Database.*/
@@ -69,14 +69,26 @@ function QuizzMe() {
 
   // let answers = [1, 2, 3, 4];
 
-  function checkAnswer(check) {
-    //if selected answer matches correct answer, return "correct!"
-    if (right === true) {
-      console.log("correct!");
-    } else {
-      console.log("incorrect!");
-    }
-  }
+  // if the correct answer  is clicked right should be set to true
+  // if the wrong answer is clicked, right should be set to false
+  // HOW?!
+  // changing state onClick doesn't work because the state doesn't change UNTIL click,
+  // which means the next answer AFTER the correct one returns "correct!"
+  // we also need to eventually make it so that the answers are displayed in a different order each time!!!
+
+  // function checkAnswer() {
+  //   if (right === true) {
+  //       alert("correct!");
+  //         setRight(false);
+  //   } else if (right === false){
+  //     alert("incorrect!");
+  //   }
+  // }
+
+  // function correctAnswer(){
+  //   setRight(true);
+  //   console.log("correctAnswer");
+  // }
 
   return (
     <div className="quiz-div">
@@ -103,6 +115,29 @@ function QuizzMe() {
           alt="gif"
         />
 
+//JACk A
+        {/* hard coded alerts because we ran out of time to get this working properly! */}
+        <div
+          onClick={() => {
+            alert("Correct");
+          }}
+        >
+          {correct}
+        </div>
+        <div
+          onClick={() => {
+            alert("Incorrect");
+          }}
+        >
+          {incorrectA}
+        </div>
+        <div
+          onClick={() => {
+            alert("Incorrect");
+          }}
+        >
+
+// JACK B
         <p className="question-p">{question}</p>
         <div className="answers" onClick={checkAnswer}>
           {correct}
@@ -111,6 +146,7 @@ function QuizzMe() {
           {incorrectA}
         </div>
         <div className="answers" onClick={checkAnswer}>
+
           {incorrectB}
         </div>
       </div>
