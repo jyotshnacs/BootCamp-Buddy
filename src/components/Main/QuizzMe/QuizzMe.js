@@ -9,6 +9,8 @@ function QuizzMe() {
   const [correct, setCorrect] = useState("");
   const [incorrectA, setIncorrectA] = useState("");
   const [incorrectB, setIncorrectB] = useState("");
+  const [right, setRight] = useState(false);
+  const [wrong, setWrong] = useState(false);
 
   /* 1) Send a fetch request to the Api
    to get the quizQuestion back from the Database.*/
@@ -65,6 +67,15 @@ function QuizzMe() {
 
   // let answers = [1, 2, 3, 4];
 
+  function checkAnswer(check) {
+    //if selected answer matches correct answer, return "correct!"
+    if (right === true) {
+      console.log("correct!");
+    } else {
+      console.log("incorrect!");
+    }
+  }
+
   return (
     <div className="quiz-div">
       <div>
@@ -74,19 +85,9 @@ function QuizzMe() {
         />
         <p>{question}</p>
 
-        <label>
-          <input type="radio" name="quiz" />
-          {correct}
-        </label>
-        <label>
-          <input type="radio" name="quiz" />
-          {incorrectA}
-        </label>
-        <label>
-          <input type="radio" name="quiz" />
-          {incorrectB}
-        </label>
-        <button>Submit Answer</button>
+        <div onClick={checkAnswer}>{correct}</div>
+        <div onClick={checkAnswer}>{incorrectA}</div>
+        <div onClick={checkAnswer}>{incorrectB}</div>
       </div>
     </div>
   );
