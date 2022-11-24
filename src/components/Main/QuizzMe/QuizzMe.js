@@ -9,8 +9,8 @@ function QuizzMe() {
   const [correct, setCorrect] = useState("");
   const [incorrectA, setIncorrectA] = useState("");
   const [incorrectB, setIncorrectB] = useState("");
-  const [right, setRight] = useState(false);
-  const [wrong, setWrong] = useState(false);
+  const [right, setRight] = useState(null);
+  const [wrong, setWrong] = useState(null);
 
   /* 1) Send a fetch request to the Api
    to get the quizQuestion back from the Database.*/
@@ -67,14 +67,20 @@ function QuizzMe() {
 
   // let answers = [1, 2, 3, 4];
 
-  function checkAnswer(check) {
+  function checkAnswer() {
+    // fetchCorrect has the correct answer
     //if selected answer matches correct answer, return "correct!"
     if (right === true) {
-      console.log("correct!");
-    } else {
-      console.log("incorrect!");
+        alert("correct!");
+          setRight(false);
+    } else if (right === false){
+      alert("incorrect!");
     }
   }
+  // function correctAnswer(){
+  //   setRight(true);
+  //   console.log("correctAnswer");
+  // }
 
   return (
     <div className="quiz-div">
@@ -84,10 +90,11 @@ function QuizzMe() {
           alt="gif"
         />
         <p>{question}</p>
+        {/* <input type="button" value="test" onclick="alert('hey'); alert('ho');" /> */}
 
-        <div onClick={checkAnswer}>{correct}</div>
-        <div onClick={checkAnswer}>{incorrectA}</div>
-        <div onClick={checkAnswer}>{incorrectB}</div>
+        <div onClick= {() => {alert("Correct")}}>{correct}</div>
+        <div onClick={() => {alert("Incorrect")}}>{incorrectA}</div>
+        <div onClick={() => {alert("Incorrect")}}>{incorrectB}</div>
       </div>
     </div>
   );
