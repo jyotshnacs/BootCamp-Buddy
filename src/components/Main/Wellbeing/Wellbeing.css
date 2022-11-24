@@ -3,14 +3,10 @@
 
 .wellBeingSection{
     display: flex;
-    flex: 1;
-    flex-direction: row;
-    align-items: space-between;
-  
-    justify-content: space-between;
-    width: 100%;
     height: 320px;
     background-color: #569099;
+    
+    
 }
 
 .timerContainer {
@@ -18,6 +14,7 @@
   background-color: #569099;
   text-align: right;
   height: 320px;
+  margin-left: 30px;
 
 }
 
@@ -47,7 +44,7 @@ button{
 
 }
 
-button.with-text{
+button.set-with-text{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -60,23 +57,41 @@ button.with-text{
   line-height: 16px;
 }
 
-button.with-text{
+button.set-with-text{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: auto;
-  background-color:rgba(255,255,255);
+  background-color:rgb(242, 232, 232);
   border-radius:10px;
   padding: 10px 20px;
   font-size: 1.4rem;
   line-height: 16px;
+  background-color:#93c572;
 }
-button.with-text svg{
+button.set-with-text svg{
   width: 36px;
   float:left;
   margin-right: 5px;
 }
+
+button.with-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  border-radius:10px;
+  padding: 10px 30px;
+  
+  font-size: 1.4rem;
+  line-height: 16px;
+  background-color:#93c572;
+}
+
+
+   
 label{
   display:block;
   margin-bottom: 10px;
@@ -90,11 +105,12 @@ label{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #889956;
+  background-color: #569099;
   padding: 20px;
   text-align: right;
   height: 100%;
   width: 50%;
+  margin-left: 30%;
 } 
 
 .wellImg {
@@ -108,9 +124,15 @@ height: auto;
   bottom: 0;
   right: 0;
   top: -60%;
- 
+  text-align: left;
+  padding-right: 20px;
+
   
-
-
-
 }
+
+.play, .pause {
+
+  color: rgb(147, 197, 114) ;
+}
+
+

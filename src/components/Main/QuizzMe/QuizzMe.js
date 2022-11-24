@@ -21,7 +21,7 @@ function QuizzMe() {
   const rightAnswer = () => {
     if (input === "1") {
       alert("Correct");
-    }else{
+    } else {
       alert("Wrong");
     }
   };
@@ -43,10 +43,10 @@ function QuizzMe() {
         ]}
       />
       <div>
-        <img
+        {/* <img
           src="https://media.giphy.com/media/3o7TKSjRrfIPjeiVyE/giphy.gif"
-          alt="gif"
-        />
+          alt="gif" */}
+        <div />
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
           repellat obcaecati corrupti eos, adipisci natus laudantium fuga quo
@@ -69,7 +69,7 @@ function QuizzMe() {
             </label>
           </div>
         ))}
-        <button onClick={rightAnswer} >Next</button>
+        <button onClick={rightAnswer}>Next</button>
       </div>
     </div>
   );
