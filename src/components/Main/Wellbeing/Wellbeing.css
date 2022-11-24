@@ -5,6 +5,10 @@
     display: flex;
     height: 320px;
     background-color: #569099;
+    border: solid black;
+    max-width: 100%;
+    grid: auto auto / auto auto auto auto; 
+    
     
     
 }
@@ -15,6 +19,8 @@
   text-align: right;
   height: 320px;
   margin-left: 30px;
+
+
 
 }
 
