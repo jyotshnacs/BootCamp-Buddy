@@ -109,15 +109,14 @@ function QuizzMe() {
             className="question-two"
           />
         </div>
-
         <img
           src="https://media.giphy.com/media/3o7TKSjRrfIPjeiVyE/giphy.gif"
           alt="gif"
         />
 
-//JACk A
         {/* hard coded alerts because we ran out of time to get this working properly! */}
         <div
+          className="question-p"
           onClick={() => {
             alert("Correct");
           }}
@@ -125,6 +124,7 @@ function QuizzMe() {
           {correct}
         </div>
         <div
+          className="answers"
           onClick={() => {
             alert("Incorrect");
           }}
@@ -132,13 +132,12 @@ function QuizzMe() {
           {incorrectA}
         </div>
         <div
+          className="answers"
           onClick={() => {
             alert("Incorrect");
           }}
         >
-
-// JACK B
-        <p className="question-p">{question}</p>
+          {/* <p className="question-p">{question}</p>
         <div className="answers" onClick={checkAnswer}>
           {correct}
         </div>
@@ -147,7 +146,7 @@ function QuizzMe() {
         </div>
         <div className="answers" onClick={checkAnswer}>
 
-          {incorrectB}
+          {incorrectB} */}
         </div>
       </div>
     </div>
