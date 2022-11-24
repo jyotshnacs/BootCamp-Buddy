@@ -2,6 +2,8 @@ import React from "react";
 // import Dropdown from "./Dropdown/Dropdown";
 import { useState } from "react";
 import "./QuizzMe.css";
+import questionMark from "../../../Images/question.png";
+import glasses from "../../../Images/glasses.png";
 
 function QuizzMe() {
   // const [input, setInput] = useState("");
@@ -91,12 +93,29 @@ function QuizzMe() {
   return (
     <div className="quiz-div">
       <div>
+        <div className="quiz-header-div">
+          <div className="glasses-div">
+            <img src={glasses} alt="lappy-glasses" className="glasses" />
+          </div>
+          <img
+            src={questionMark}
+            alt="question-mark"
+            className="question-one"
+          />
+          <h1 className="quiz-header-text">Quiz Time</h1>
+          <img
+            src={questionMark}
+            alt="question-mark"
+            className="question-two"
+          />
+        </div>
+
         <img
           src="https://media.giphy.com/media/3o7TKSjRrfIPjeiVyE/giphy.gif"
           alt="gif"
         />
-        <p>{question}</p>
 
+//JACk A
         {/* hard coded alerts because we ran out of time to get this working properly! */}
         <div
           onClick={() => {
@@ -117,6 +136,17 @@ function QuizzMe() {
             alert("Incorrect");
           }}
         >
+
+// JACK B
+        <p className="question-p">{question}</p>
+        <div className="answers" onClick={checkAnswer}>
+          {correct}
+        </div>
+        <div className="answers" onClick={checkAnswer}>
+          {incorrectA}
+        </div>
+        <div className="answers" onClick={checkAnswer}>
+
           {incorrectB}
         </div>
       </div>
