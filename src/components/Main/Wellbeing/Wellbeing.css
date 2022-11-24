@@ -1,20 +1,23 @@
 
+
+
 .wellBeingSection{
     display: flex;
+    flex: 1;
     flex-direction: row;
     align-items: space-between;
   
     justify-content: space-between;
     width: 100%;
     height: 320px;
-    background-color: #5f17b0;
+    background-color: #569099;
 }
 
 .timerContainer {
   display: flex;
   background-color: #569099;
   text-align: right;
-  height: 280px;
+  height: 320px;
 
 }
 
@@ -23,12 +26,15 @@
   color: rgb(0, 0, 0);
   font-family: Caveat, cursive;
   font-size: 50px;
-  text-align: center;
-  flex: 1;
-  display: flex;
-  position: relative;
-  max-width: 100px;
-  min-width: 50px;
+  padding-top: 0 ;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  line-height: 20px;
+
+
+  margin-bottom: 200px;
+  
 }
 
 button{
@@ -75,6 +81,8 @@ label{
   display:block;
   margin-bottom: 10px;
   margin-top: 20px;
+  width: 100%;
+  min-width: 110px;
   text-transform: capitalize;
 }
 .settings{
@@ -88,3 +96,21 @@ label{
   height: 100%;
   width: 50%;
 } 
+
+.wellImg {
+height: auto;
+
+}
+
+.instructions{
+  display: flex;
+  position: relative;
+  bottom: 0;
+  right: 0;
+  top: -60%;
+ 
+  
+
+
+
+}
