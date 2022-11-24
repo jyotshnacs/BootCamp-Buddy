@@ -1,25 +1,45 @@
+:root{
+    --color1: #f6d809;
+    --color2: #a4dad2;
+}
+
 .slider{
+    
     height: 20px;
-    border: 2px solid var(--red);
-    border-radius: 20px;
+    border: 2px solid var(--color1);
+    border-radius: 18px;
+    padding-bottom: 19px;
 }
 
 .thumb{
-    background-color: var(--red);
+    background-color: var(--color1);
     cursor:pointer;
     width:20px;
     height: 20px;
     border-radius: 20px;
+  
+    
 }
 
 .slider.green{
-    border: 2px solid var(--green);
+    border: 2px solid var(--color2);
 }
 .slider.green .thumb{
-    background-color: var(--green);
+    background-color: var(--color2);
 }
 
-.work-setting{
+.work-setting { 
     margin-left: 60px;
-    margin-bottom: 40px;
-}
+    margin-bottom: 10px;
+    margin-right: 60px;
+    padding: 20px;
+ } 
+
+ 
+
+
+
+ 
+
+
+

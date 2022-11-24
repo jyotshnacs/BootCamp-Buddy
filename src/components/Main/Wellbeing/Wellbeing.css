@@ -1,37 +1,72 @@
-:root{
-  --red: #f54e4e;
-  --green: #4aec8c;
+
+
+
+.wellBeingSection{
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: space-between;
+  
+    justify-content: space-between;
+    width: 100%;
+    height: 320px;
+    background-color: #569099;
 }
 
-.main{
+.timerContainer {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  background-color: #30384b;
-  color: #eee;
-  padding-top: 50px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  max-height: 250px;
-  max-width: 50%;
+  background-color: #569099;
+  text-align: right;
+  height: 320px;
+
 }
+
+
+.wellBeingTitle {
+  color: rgb(0, 0, 0);
+  font-family: Caveat, cursive;
+  font-size: 50px;
+  padding-top: 0 ;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  line-height: 20px;
+
+
+  margin-bottom: 200px;
+  
+}
+
 button{
   background-color: transparent;
-  color: rgba(255,255,255,0.8);
+  color: rgb(0, 0, 0);
   border:0;
   display: inline-block;
   width: 70px;
   cursor: pointer;
+
 }
+
 button.with-text{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: auto;
-  background-color:rgba(255,255,255,0.1);
+  background-color:rgba(255,255,255);
+  border-radius:10px;
+  padding: 10px 20px;
+  font-size: 1.4rem;
+  line-height: 16px;
+}
+
+button.with-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  background-color:rgba(255,255,255);
   border-radius:10px;
   padding: 10px 20px;
   font-size: 1.4rem;
@@ -46,12 +81,36 @@ label{
   display:block;
   margin-bottom: 10px;
   margin-top: 20px;
+  width: 100%;
+  min-width: 110px;
   text-transform: capitalize;
 }
 .settings{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 300px;;
+  background-color: #889956;
+  padding: 20px;
+  text-align: right;
+  height: 100%;
+  width: 50%;
+} 
+
+.wellImg {
+height: auto;
+
+}
+
+.instructions{
+  display: flex;
+  position: relative;
+  bottom: 0;
+  right: 0;
+  top: -60%;
+ 
+  
+
+
+
 }
