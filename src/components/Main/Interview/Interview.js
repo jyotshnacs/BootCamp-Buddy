@@ -1,25 +1,29 @@
 import React, { useState, useEffect } from "react";
 
-let interviewQuestions = [
-  "Tell a time when you had to work with a difficult person.",
-  "How do you handle stress and pressure?",
-  "What is your greatest achievement?",
-  "How many tenis ball will fit in airplane?",
-  "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.",
-  "Given an integer x, return true if x is palindrome integer.",
-  "Given a string s, find the length of the longest substring without repeating characters.",
-  "Given an array of integers nums, sort the array in ascending order.",
-  "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.",
-];
 function Interview() {
   const [text, setText] = useState("");
+
   useEffect(() => {
-    setInterval(() => {
-      let randomQuestion = Math.floor(Math.random() * interviewQuestions.length);
-      setText(interviewQuestions[randomQuestion]);
+    // instead of selecting from an array, need to return the result of fetch request to our API
+
+    async function fetchData() {
+      //port number hard coded - could pass in the PORT env variable?
+      const response = await fetch(`http://localhost:3005/api/interviewprep`);
+      const data = await response.json();
+      // console.log(data);
+      // console.log(data.payload[0].prep);
+
+      setInterval(() => {
+        const question =
+          data.payload[Math.floor(Math.random() * data.payload.length)].prep;
+        setText(question);
+        console.log(question);
+      }, 10000);
     }
-    , 1000000);
+    fetchData();
   }, []);
+
+  //  // }, []);
 
   return (
     <div>
