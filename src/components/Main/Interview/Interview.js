@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import "./Interview.css";
+import star from "../../../Images/stars.png";
 
 function Interview() {
   const [text, setText] = useState("");
@@ -26,12 +28,14 @@ function Interview() {
   //  // }, []);
 
   return (
-    <div>
-      <div>
-        <h1>Interview Prep</h1>
+    <div className="interview-div">
+      <div className="header-div">
+        <h1 className="header-text">Interview Prep</h1>
       </div>
-      <div>
-        <p>{text}</p>
+      <img src={star} alt="star" className="star-one" />
+      <img src={star} alt="star" className="star-two" />
+      <div className="prep-div">
+        <p className="prep-text">{text}</p>
       </div>
     </div>
   );
