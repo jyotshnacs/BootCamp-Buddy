@@ -30,8 +30,8 @@
 /* added */
 .header-div h1 {
   overflow-wrap: break-word;
-  color:  #ec1616;
-  text-shadow: 2px 2px 2px #569099;
+  color:  #030303;
+  /* text-shadow: 2px 2px 2px #569099; */
 }
 .header-text {
   font-size: 62px;

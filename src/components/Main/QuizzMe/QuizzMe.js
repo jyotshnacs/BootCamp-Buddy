@@ -57,11 +57,13 @@ function QuizzMe() {
         ]}
       />
       <div>
-        <img
+        {/* <img
           src="https://media.giphy.com/media/3o7TKSjRrfIPjeiVyE/giphy.gif"
+
           alt="gif"
         />
         <p>{question}</p>
+
       </div>
       <div>
         {answers.map((answer, key) => (

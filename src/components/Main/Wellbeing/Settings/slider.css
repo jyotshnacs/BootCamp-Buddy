@@ -1,6 +1,8 @@
 :root{
-    --color1: #f6d809;
-    --color2: #a4dad2;
+
+    --color1: rgb(246, 216, 9);
+    --color2: rgb(188,224,138);
+
 }
 
 .slider{
