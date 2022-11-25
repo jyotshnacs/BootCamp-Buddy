@@ -4,6 +4,7 @@ import { useState } from "react";
 import "./QuizzMe.css";
 import questionMark from "../../../Images/question.png";
 import glasses from "../../../Images/glasses.png";
+import snippet from "../../../Images/snippet.png";
 
 function QuizzMe() {
   // const [input, setInput] = useState("");
@@ -102,38 +103,39 @@ function QuizzMe() {
       </div>
 
       <img
-        className="gif"
+        className="snippet"
         alt="This content is not available"
-        src="https://media.giphy.com/media/3o7TKSjRrfIPjeiVyE/giphy.gif"
-        alt="gif"
+        src={snippet}
       />
 
       <div className="question-container">
         <h2 className="question-here">{question}</h2>
-        <p
-          className="question-p"
-          onClick={() => {
-            alert("Correct");
-          }}
-        >
-          {correct}
-        </p>
-        <p
-          className="answers"
-          onClick={() => {
-            alert("Incorrect");
-          }}
-        >
-          {incorrectA}
-        </p>
-        <p
-          className="answers"
-          onClick={() => {
-            alert("Incorrect");
-          }}
-        >
-          {incorrectB}
-        </p>
+        <div className="answer-container">
+          <p
+            className="question-p"
+            onClick={() => {
+              alert("Correct");
+            }}
+          >
+            {correct}
+          </p>
+          <p
+            className="answers"
+            onClick={() => {
+              alert("Incorrect");
+            }}
+          >
+            {incorrectA}
+          </p>
+          <p
+            className="answers"
+            onClick={() => {
+              alert("Incorrect");
+            }}
+          >
+            {incorrectB}
+          </p>
+        </div>
       </div>
     </div>
   );
