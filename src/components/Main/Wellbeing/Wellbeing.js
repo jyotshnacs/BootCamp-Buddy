@@ -17,18 +17,15 @@ function Wellbeing() {
 
       <img className="wellImg" src={mascot} alt="happy" />
       <div className="textContainer">
-        <h2 className="wellBeingTitle">Next wellbeing check:</h2>
+        {/* <h2 className="wellBeingTitle">Next wellbeing check:</h2> */}
         <div className="instructions">
           <ul>
-            <li>
-              This app aims to help people prepare for interviews in the tech
-              industry.
-            </li>
-            <li>
-              To start the app select setting and select the time you want to
-              study for we advice 45 minutes.
-            </li>
-            <li>
+            <h2>Set a timer for your next wellbeing check!</h2>
+            <h2>
+              When the timer stops, remember to check your posture, move your
+              body and hydrate!
+            </h2>
+            {/* <li>
               The app will then start a timer and when the timer is over it will
               notify you to change your posture or drink water
             </li>
@@ -39,7 +36,7 @@ function Wellbeing() {
             <li>
               You can also select a week and review your week by answering
               questions.
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

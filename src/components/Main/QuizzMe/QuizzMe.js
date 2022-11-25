@@ -92,32 +92,24 @@ function QuizzMe() {
 
   return (
     <div className="quiz-div">
-        <div className="quiz-header-div">
-          <div className="glasses-div">
-            <img src={glasses} alt="lappy-glasses" className="glasses" />
-          </div>
-          <img
-            src={questionMark}
-            alt="question-mark"
-            className="question-one"
-          />
-          <h1 className="quiz-header-text">Quiz Time</h1>
-          <img
-            src={questionMark}
-            alt="question-mark"
-            className="question-two"
-          />
+      <div className="quiz-header-div">
+        <div className="glasses-div">
+          <img src={glasses} alt="lappy-glasses" className="glasses" />
         </div>
-     
-        <img
-        className="gif"
-         alt="This content is not available"
-          src="https://media.giphy.com/media/3o7TKSjRrfIPjeiVyE/giphy.gif"
-          alt="gif"
-        />
+        <img src={questionMark} alt="question-mark" className="question-one" />
+        <h1 className="quiz-header-text">Quiz Time</h1>
+        <img src={questionMark} alt="question-mark" className="question-two" />
+      </div>
 
-      <div className="questios-container">
-        <h2>{question}</h2>
+      <img
+        className="gif"
+        alt="This content is not available"
+        src="https://media.giphy.com/media/3o7TKSjRrfIPjeiVyE/giphy.gif"
+        alt="gif"
+      />
+
+      <div className="question-container">
+        <h2 className="question-here">{question}</h2>
         <p
           className="question-p"
           onClick={() => {
@@ -139,7 +131,9 @@ function QuizzMe() {
           onClick={() => {
             alert("Incorrect");
           }}
-        ></p>
+        >
+          {incorrectB}
+        </p>
       </div>
     </div>
   );

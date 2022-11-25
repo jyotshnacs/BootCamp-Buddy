@@ -5,7 +5,7 @@
   --secondary-color: #f6d809;
   --tertiary-color: #030303;
 
-  --text-color: wheat
+  --text-color: wheat;
 }
 
 .quiz-div {
@@ -30,7 +30,6 @@
   font-size: 62px;
   font-weight: 100;
   color: var(--tertiary-color);
-
 }
 
 .question-one {
@@ -44,7 +43,7 @@
   min-height: 30px;
   padding-left: 10px;
 }
-.gif{
+.gif {
   width: 100%;
   height: 20%;
 }
@@ -54,14 +53,12 @@
   height: 20%;
 }
 
-
-
 .question-p {
-  font-size: 46px;
+  font-size: 32px;
 }
 
 .answers {
-  font-size: 38px;
+  font-size: 32px;
 }
 
 /* mobile */
@@ -70,7 +67,11 @@
     flex-direction: column;
     width: 100%;
   }
-  .question-one{
+  .question-one {
     display: none;
   }
+}
+
+.question-here {
+  font-size: 32px;
 }
