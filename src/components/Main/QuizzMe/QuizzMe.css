@@ -1,57 +1,60 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
 
+:root {
+  --main-color: #569099;
+  --secondary-color: #f6d809;
+  --tertiary-color: #030303;
+
+  --text-color: wheat
+}
+
 .quiz-div {
+  background-color: var(--main-color);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  border: solid black;
-
+  align-items: center;
   width: 50%;
   height: 100%;
-  background-color: #569099;
-
-  text-align: center;
   font-family: Caveat, cursive;
 }
 
 .quiz-header-div {
-  border-bottom: solid black;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f6d809;
+  background-color: var(--secondary-color);
+  width: 100%;
 }
 
 .quiz-header-text {
-  overflow-wrap: break-word;
-  color: #000000;
-  text-shadow: 2px 2px 2px #569099;
   font-size: 62px;
   font-weight: 100;
+  color: var(--tertiary-color);
+
 }
 
 .question-one {
   max-height: 100px;
-  height: 100%;
+  min-height: 30px;
   padding-right: 10px;
 }
 
 .question-two {
   max-height: 100px;
-  height: 100%;
+  min-height: 30px;
   padding-left: 10px;
+}
+.gif{
+  width: 100%;
+  height: 20%;
 }
 
 .glasses {
-  display: flex;
   max-height: 100px;
-  height: 100%;
+  height: 20%;
 }
 
-.glasses-div {
-  display: flex;
-  margin-left: -150px;
-}
+
 
 .question-p {
   font-size: 46px;
@@ -59,4 +62,15 @@
 
 .answers {
   font-size: 38px;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .quiz-div {
+    flex-direction: column;
+    width: 100%;
+  }
+  .question-one{
+    display: none;
+  }
 }
