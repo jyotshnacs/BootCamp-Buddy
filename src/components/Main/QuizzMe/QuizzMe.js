@@ -92,8 +92,6 @@ function QuizzMe() {
 
   return (
     <div className="quiz-div">
-      <div>
-
         <div className="quiz-header-div">
           <div className="glasses-div">
             <img src={glasses} alt="lappy-glasses" className="glasses" />
@@ -110,69 +108,38 @@ function QuizzMe() {
             className="question-two"
           />
         </div>
+     
         <img
-
+        className="gif"
+         alt="This content is not available"
           src="https://media.giphy.com/media/3o7TKSjRrfIPjeiVyE/giphy.gif"
-
           alt="gif"
         />
-//JACK
-        <p>{question}</p>
 
-      </div>
-      <div>
-        {answers.map((answer, key) => (
-          <div key={key}>
-            <input
-              type="radio"
-              id={answer}
-              name="wrong answer"
-              value={answer}
-              onChange={handleChange}
-            />
-            <label htmlFor={answer}>
-              ' Lorem ipsum dolor sit amet consectetur adipisicing elit.'
-            </label>
-          </div>
-        ))}
-        <button onClick={rightAnswer}>Next</button>
-
-
-        {/* hard coded alerts because we ran out of time to get this working properly! */}
-        <div
+      <div className="questios-container">
+        <h2>{question}</h2>
+        <p
           className="question-p"
           onClick={() => {
             alert("Correct");
           }}
         >
           {correct}
-        </div>
-        <div
+        </p>
+        <p
           className="answers"
           onClick={() => {
             alert("Incorrect");
           }}
         >
           {incorrectA}
-        </div>
-        <div
+        </p>
+        <p
           className="answers"
           onClick={() => {
             alert("Incorrect");
           }}
-        >
-          {/* <p className="question-p">{question}</p>
-        <div className="answers" onClick={checkAnswer}>
-          {correct}
-        </div>
-        <div className="answers" onClick={checkAnswer}>
-          {incorrectA}
-        </div>
-        <div className="answers" onClick={checkAnswer}>
-
-          {incorrectB} */}
-        </div>
-
+        ></p>
       </div>
     </div>
   );
@@ -204,3 +171,32 @@ export default QuizzMe;
 //           <button onClick={handleMenuFour}>Week 4</button>,
 //         ]}
 //       />
+
+/* {answers.map((answer, key) => (
+          <div key={key}>
+            <input
+              type="radio"
+              id={answer}
+              name="wrong answer"
+              value={answer}
+              onChange={handleChange}
+            />
+            <label htmlFor={answer}>
+              ' Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+            </label>
+          </div>
+        ))}
+        <button onClick={rightAnswer}>Next</button> */
+
+/* hard coded alerts because we ran out of time to get this working properly! */
+
+/* <p className="question-p">{question}</p>
+        <div className="answers" onClick={checkAnswer}>
+          {correct}
+        </div>
+        <div className="answers" onClick={checkAnswer}>
+          {incorrectA}
+        </div>
+        <div className="answers" onClick={checkAnswer}>
+
+          {incorrectB} */

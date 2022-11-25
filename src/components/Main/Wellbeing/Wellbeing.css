@@ -2,36 +2,28 @@
 
 
 .wellBeingSection{
-    display: flex;
-    
-    
-    
-/merge a JAY!!!!
+    /* display: flex;
     height: 320px;
     background-color: #569099;
-    border: solid black;
     max-width: 100%;
     grid: auto auto / auto auto auto auto; 
-    
-    
-    
-/merge b  JAY!!!!
-    flex: 1;
+    */
+    display: flex;
     flex-direction: row;
-    align-items: space-between
+    justify-content: center;
     justify-content: space-between;
-    width: 100%;
-    height: 320px;
+    max-width: 100vw;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
     background-color: #569099;
+
+
 }
 
 .timerContainer {
   display: flex;
-  background-color: #569099;
   text-align: right;
-  height: 320px;
-
-  margin-left: 30px;
+  height: 310px;
 }
 
 
@@ -39,14 +31,9 @@
   color: rgb(0, 0, 0);
   font-family: Caveat, cursive;
   font-size: 50px;
-  padding-top: 0 ;
-  padding-bottom: 20px;
   padding-left: 20px;
   padding-right: 20px;
-  line-height: 20px;
-
-
-  margin-bottom: 200px;
+  padding-top: 20px;
   
 }
 
@@ -132,21 +119,37 @@ label{
 } 
 
 .wellImg {
-height: auto;
-
+  max-width: 300px;
+  max-height: 300px;
 }
 
-.instructions{
+
+
+
+
+.textContainer{
   display: flex;
-  position: relative;
-  bottom: 0;
-  right: 0;
-  top: -60%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
   text-align: left;
-  padding-right: 20px;
-
-  
+  height: 100%;
+  width: 50%;
 }
+.instructions{
+  color: wheat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+  text-align: left;
+  height: 100%;
+  width: 100%;
+  line-height: -10px;
+}
+
 
 .play, .pause {
 
@@ -154,3 +157,23 @@ height: auto;
 }
 
 
+/* mobile */
+@media (max-width: 768px) {
+  .wellImg {
+   display: none;
+  }
+  .textContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+/* tablet */
+@media (max-width: 1024px) {
+ 
+  .textContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}

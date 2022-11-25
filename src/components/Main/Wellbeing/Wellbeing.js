@@ -16,7 +16,7 @@ function Wellbeing() {
       {/* image goes here */}
 
       <img className="wellImg" src={mascot} alt="happy" />
-      <div>
+      <div className="textContainer">
         <h2 className="wellBeingTitle">Next wellbeing check:</h2>
         <div className="instructions">
           <ul>

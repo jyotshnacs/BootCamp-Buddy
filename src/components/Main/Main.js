@@ -13,6 +13,7 @@ function Main() {
       <div className="mainContainer">
       <QuizzMe />
       <Interview />
+      
       </div>
     </div>
   );

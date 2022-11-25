@@ -6,6 +6,9 @@
 
 .navbar-div {
   background-color: #569099;
+  border: 2px solid black;
+  border-bottom: 0;
+  width: 100%;
 }
 
 .title-div {
@@ -39,7 +42,7 @@
 
 .mascot-image {
   max-height: 200px;
-  margin-left: 82vw;
+  margin-left: 70vw;
   margin-top: -190px;
   margin-bottom: -20px;
   transition: transform 5s ease;
@@ -48,4 +51,12 @@
 
 .mascot-image:hover {
   transform: translateX(500px);
+}
+
+/* mobile */
+
+@media screen and (max-width: 768px) {
+  .mascot-image {
+    width: 30% ;
+  }
 }
