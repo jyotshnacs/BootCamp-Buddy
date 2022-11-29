@@ -7,6 +7,7 @@
 - Make your changes
 - Commit your changes
 - Push your changes to your fork
+
 ***If you want to collaborate:***
 - Create a pull request
 - Wait for your changes to be merged
