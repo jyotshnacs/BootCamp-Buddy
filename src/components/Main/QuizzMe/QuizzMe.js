@@ -12,37 +12,16 @@ function QuizzMe() {
   const [incorrectA, setIncorrectA] = useState("");
   const [incorrectB, setIncorrectB] = useState("");
 
-  // Fetches and sets the question.
+  // Fetches and sets the question and answers.
   async function fetchQuestion() {
     const response = await fetch(`http://localhost:3005/api/quizquestions`);
     const data = await response.json();
     setQuestion(data.payload[0].question);
-  }
-  fetchQuestion();
-
-  async function fetchCorrect() {
-    const response = await fetch(`http://localhost:3005/api/quizquestions`);
-    const data = await response.json();
     setCorrect(data.payload[0].correctanswer);
-  }
-
-  fetchCorrect();
-
-  async function fetchIncorrectA() {
-    const response = await fetch(`http://localhost:3005/api/quizquestions`);
-    const data = await response.json();
     setIncorrectA(data.payload[0].incorrectanswera);
-  }
-
-  fetchIncorrectA();
-
-  async function fetchIncorrectB() {
-    const response = await fetch(`http://localhost:3005/api/quizquestions`);
-    const data = await response.json();
     setIncorrectB(data.payload[0].incorrectanswerb);
   }
-
-  fetchIncorrectB();
+  fetchQuestion();
 
   return (
     <div className="quiz-div">
