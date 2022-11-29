@@ -1,3 +1,4 @@
+// Creates a new BackButton
 function BackButton(props) {
   return (
     <button {...props} className={"with-text"}>

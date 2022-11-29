@@ -1,3 +1,4 @@
+// Create a PlayButton.
 function PlayButton(props) {
   return (
     <button {...props}>

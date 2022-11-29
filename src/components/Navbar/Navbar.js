@@ -3,6 +3,7 @@ import "./Navbar.css";
 import mascot from "../../Images/lappy.png";
 import menu from "../../Images/menu.png";
 
+// Create a navbar div
 function Navbar() {
   return (
     <div className="navbar-div">

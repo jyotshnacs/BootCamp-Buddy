@@ -9,11 +9,9 @@ function Main() {
     <div>
       <Wellbeing />
 
-      
       <div className="mainContainer">
-      <QuizzMe />
-      <Interview />
-      
+        <QuizzMe />
+        <Interview />
       </div>
     </div>
   );

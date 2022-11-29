@@ -6,6 +6,7 @@ import SettingsContext from "./Settings/SettingsContext";
 import { useState } from "react";
 import mascot from "../../../Images/look-after-yourself.png";
 
+// Returns a function that can be used to perform a wellbeing check.
 function Wellbeing() {
   const [showSettings, setShowSettings] = useState(false);
   const [workMinutes, setWorkMinutes] = useState(45);
@@ -25,18 +26,6 @@ function Wellbeing() {
               When the timer stops, remember to check your posture, move your
               body and hydrate!
             </h2>
-            {/* <li>
-              The app will then start a timer and when the timer is over it will
-              notify you to change your posture or drink water
-            </li>
-            <li>
-              You will find Every 30 minutes a new interview question will
-              appear.
-            </li>
-            <li>
-              You can also select a week and review your week by answering
-              questions.
-            </li> */}
           </ul>
         </div>
       </div>

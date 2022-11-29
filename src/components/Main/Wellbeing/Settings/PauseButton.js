@@ -1,3 +1,4 @@
+// Creates a PauseButton
 function PauseButton(props) {
   return (
     <button {...props}>

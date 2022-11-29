@@ -1,3 +1,4 @@
+// Creates a SettingsButton.
 function SettingsButton(props) {
   return (
     <button {...props} className={"set-with-text"}>

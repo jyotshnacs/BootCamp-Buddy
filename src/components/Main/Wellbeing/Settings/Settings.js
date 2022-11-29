@@ -4,6 +4,7 @@ import SettingsContext from "./SettingsContext";
 import { useContext } from "react";
 import BackButton from "./BackButton";
 
+// Creates a settings div.
 function Settings() {
   const settingsInfo = useContext(SettingsContext);
   return (

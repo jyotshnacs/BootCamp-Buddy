@@ -1,4 +1,5 @@
-import React from "react";
+/** As a Stretch goal - not yet implemented.
+ * import React from "react";
 import './Dropdown.css';
 import { useState } from "react";
 
@@ -33,3 +34,4 @@ const Dropdown = ({ trigger, menu }) => {
 
 export default Dropdown;
 //https://www.robinwieruch.de/react-dropdown/ documentation
+*/

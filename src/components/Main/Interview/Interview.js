@@ -8,14 +8,15 @@ function Interview() {
   );
 
   useEffect(() => {
-    // instead of selecting from an array, need to return the result of fetch request to our API
-
+    /**  instead of selecting from an array, 
+     * need to return the result of fetch request to our API
+    */
     async function fetchData() {
-      //port number hard coded - could pass in the PORT env variable?
+      /** port number hard coded - 
+       * could pass in the PORT env variable?
+      */
       const response = await fetch(`http://localhost:3005/api/interviewprep`);
       const data = await response.json();
-      // console.log(data);
-      // console.log(data.payload[0].prep);
 
       setInterval(() => {
         const question =
@@ -27,7 +28,6 @@ function Interview() {
     fetchData();
   }, []);
 
-  //  // }, []);
 
   return (
     <div className="interview-div">
